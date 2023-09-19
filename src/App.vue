@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="wrapper">
     <div class="content">
 
       <form class="form" @submit.prevent>
@@ -41,7 +41,7 @@ export default {
     
       <div class="post" v-for="post in posts">
         <div>Название: {{post.title}}</div>
-        <div>Описнание: {{post.body}}</div>
+        <div>Описание: {{post.body}}</div>
       </div>
 
     </div>
@@ -49,17 +49,30 @@ export default {
 </template>
 
 <style>
+.wrapper{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 15px;
+  min-height: 100%;
+  overflow: hidden;
+  box-sizing: content-box;
+}
 .content{
   
+}
+*{
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 .form{
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 50px;
+
 }
 .input{
-  width: 100%;
   height: 40px;
   border: 2px solid #9637b3;
 }
@@ -70,7 +83,7 @@ export default {
   height: 40px;
 }
 .btn:hover{
-  background-color: #9c69ac;
+  background-color: #c7c7c7;
 }
 .post{
   border: 1px solid #9637b3;
